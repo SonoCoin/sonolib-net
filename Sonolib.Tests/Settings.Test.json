@@ -1,0 +1,42 @@
+{
+  "CryptoServices": {
+    "SONO": {
+      "MainNet": {
+        "Url": "https://explorer.sonocoin.io/api/rest/v1",
+        "HttpBufferSizeKb": 100000
+      },
+      "TestNet": {
+        "Url": "https://testnet.sonocoin.io/api/rest/v1",
+        "HttpBufferSizeKb": 100000
+      }
+    }
+  },
+  "BackgroundJobs": {
+    "TxWatchers": {
+      "SONO": {
+        "Delay": 15000,
+        "RunEverySec": 60,
+        "Enabled": true,
+        "TaskDelayStartSec": 1,
+        "HoldsEnabled": true,
+        "MainNet": {
+          "Enabled": false,
+          "_HeadersLimit": 5000,
+          "HeadersLimit": 50000,
+          "_HashesLimit": 1000,
+          "HashesLimit": 10000,
+          "HttpBufferSizeKb": 100000,
+          "TraceEnabled": false
+        },
+        "TestNet": {
+          "Enabled": true,
+          "HeadersLimit": 1000,
+          "_HashesLimit": 500,
+          "HashesLimit": 500,
+          "HttpBufferSizeKb": 10000,
+          "TraceEnabled": false
+        }
+      }
+    }
+  }
+}
